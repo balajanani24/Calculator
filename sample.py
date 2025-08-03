@@ -1,0 +1,181 @@
+#!C:\Python3.12\python.exe
+print("Content-Type: text/html\n")
+import pymysql
+import cgi
+a=10
+print("start")
+
+print('''
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Delius&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet" >
+    <link rel="stylesheet" href="style.css">
+
+
+</head>''')
+print("Befor the body tag")
+print('''
+<body>
+    <div class="diseasepage">
+        <div class="sympt">
+        <div class="heading">
+            <h1>What health issues are you experiencing ??</h1>
+        </div>
+        <div class="disease">
+            <img src="d1.jpg" alt="my image">
+            <h2>Pink Eye</h2><br>
+            <p> <span style="font-weight: bold;">Symptoms of Pink Eye:</span> 
+                <br> Pink or red color in the white of the eye from visible blood vessels.<br>
+                Swelling of the eyelids or thin layer that lines the white of the eye.<br>
+                Crusting of eyelids or lashes, especially in the morning.<br>
+            </p>
+            <a href="#" onclick="d1()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+                <path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1"/>
+            </svg></a>
+        </div>''')
+print("AAA")
+print('''
+        <div class="disease">
+            <img src="d2.jpg" alt="my image">
+            <h2>Cold and Flue </h2><br>
+            <p> <span style="font-weight: bold;">Symptoms of Cold and Flu:</span> <br>
+                The signs and symptoms of flu can include fever or feeling feverish/chills, cough, sore throat, runny or stuffy nose, muscle or body aches, headaches, and fatigue (tiredness).
+            </p>
+            <a href="#" onclick="d2()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+                <path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1"/>
+            </svg></a>
+
+        </div>
+        <div class="disease">
+            <img src="d3jpg.png" alt="my image">
+            <h2>Hair Loss</h2><br>
+            <p> <span style="font-weight: bold;">Symptoms of Hair Loss:</span> 
+                <br> Acne, facial hair, or an abnormal menstrual cycle
+                Weight gain or muscle weakness
+                Intolerance to cold temperatures
+                Fatigue
+            </p>
+            <a href="#" onclick="d3()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+                <path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1"/>
+            </svg></a>
+        </div>
+
+
+        
+        <div class="disease">
+            <img src="d4.jpg" alt="my image">
+            <h2>Allergies</h2><br>
+            <p> <span style="font-weight: bold;">Symptoms of Allergies:</span> 
+                <br> Sudden swelling of the lips, mouth, throat, or tongue
+                Difficulty breathing or very fast breathing
+                Tightness in the throat or difficulty swallowing
+                Skin, tongue, or lips that turn blue, gray, or pale
+                Sudden confusion, drowsiness, or dizziness
+                Fainting
+            </p>
+            <a href="#" onclick="d4()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+                <path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1"/>
+            </svg></a>
+
+
+        </div>
+        <div class="disease">
+            <img src="d5.jpg" alt="my image">
+            <h2>Vomiting and Diarrhea</h2><br>
+            <p> <span style="font-weight: bold;">Symptoms of Vomiting and Diarrhea:</span> 
+                <br> The main concern with vomiting and diarrhea is dehydration, which can occur when the body loses too much fluid. Signs of dehydration include: Decreased urine, Dark yellow color urine, Dry tongue and inside of the mouth, Dry lips, and Dry eyes with decreased or absent tears. <br>
+            </p>
+            <a href="#" onclick="d5()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+                <path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1"/>
+            </svg></a>
+
+
+        </div>
+
+
+
+        <div class="disease">
+            <img src="d6.jpg" alt="my image">
+            <h2>Sinus affection</h2><br>
+            <p> <span style="font-weight: bold;">Symptoms of Sinus affection:</span> <br>Pain and pressure: Pain or pressure in your face, cheeks, eyes, forehead, or behind your eyes
+                <br>Swelling: Swelling or tenderness around your eyes, cheeks, or forehead
+                <br>Runny or stuffy nose: A blocked or runny nose, or thick, discolored mucus
+                
+            </p>
+            <a href="#" onclick="d6()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+                <path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1"/>
+            </svg></a>
+
+        </div>
+        <div class="disease">
+            <img src="d7.jpg" alt="my image">
+            <h2>Chronic Condition</h2><br>
+            <p> <span style="font-weight: bold;">Symptoms of Chronic Condition:</span> 
+                <br>Common signs and symptoms include pain, difficulty with movement, excessive fatigue, and emotional or mood disorders.
+            </p>
+            <a href="#" onclick="d7()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-square-fill" viewBox="0 0 16 16">
+                <path d="M0 14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2zm4.5-6.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5a.5.5 0 0 1 0-1"/>
+            </svg></a>
+
+        </div>
+        </div>
+        
+
+
+
+
+    </div>
+
+</body>
+''')
+print("Before Script")
+print('''
+<script>
+    function d1()
+    {
+        window.open("doctor1.html")
+    }
+    function d2()
+    {
+        window.open("doctor2.html")
+    }
+    function d3()
+    {
+        window.open("doctor3.html")
+    }
+
+    function d4()
+    {
+        window.open("doctor4.html")
+    }
+
+    function d5()
+    {
+        window.open("doctor5.html")
+    }
+
+    function d6()
+    {
+        window.open("doctor6.html")
+    }
+    function d7()
+    {
+        window.open("doctor7.html")
+    }
+
+
+
+</script>
+
+</html>
+    ''')
+print("End")

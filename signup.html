@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Delius&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: "Delius", serif;
+            font-style: normal;
+            padding: 0px;
+            margin: 0px;
+            position: relative;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+        }
+
+        body {
+            background-image: url('img3.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .loginpage {
+            /* background-color: rgb(255, 224, 251);
+            background-position: center; */
+            width: 800px;
+            height: 500px;
+            margin-top: 50px;
+            border-radius: 20px;
+            border-color: rgb(255, 192, 203);
+            background: transparent;
+            border-style: solid;
+            display: flex;
+            flex-direction: column;
+            backdrop-filter: blur(15px);
+
+        }
+
+        img {
+            left: 360px;
+            top: 80px;
+        }
+
+        .allinputs {
+            bottom: 230px;
+            margin: 10px;
+            left: 20px;
+        }
+
+        .allinputs h1 {
+            left: 75px;
+        }
+
+        .inputs {
+            margin-top: 10px;
+            margin-left: 20px;
+            font-size: 15px;
+        }
+
+        .inputs input {
+            width: 200px;
+            height: 25px;
+            border-radius: 13px;
+            padding: 2px;
+            background: transparent;
+        }
+
+        .butt input {
+            width: 210px;
+            height: 35px;
+            background-color: pink;
+            border-radius: 10px;
+            left: 20px;
+            margin-top: 10px;
+        }
+
+        .butt input:hover {
+            background-color: palevioletred;
+        }
+
+        .loginlink p {
+            font-size: 12px;
+            display: flex;
+            left: 50px;
+        }
+
+        .loginlink a {
+            display: flex;
+            left: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="login.py" method="post">
+        <div class="loginpage">
+            <img src="kk.png" alt="description" width="430px" height="400px">
+            <div class="allinputs">
+                <h1>SIGNUP</h1>
+
+                <div class="inputs">
+                    Name<br><input type="text" placeholder=" Name" name="name">
+                </div>
+
+                <div class="inputs">
+                    Age<br><input type="number" name="age" placeholder="Age">
+                </div>
+
+                <div class="inputs">
+                    Phone No<br><input type="number" name="phone" placeholder="Phone No">
+                </div>
+
+                <div class="inputs">
+                    Password<br><input type="password" name="pwd" placeholder="Password">
+                </div>
+
+                <div class="inputs">
+                    Confirm Password<br><input type="password" name="Cpwd" placeholder="Confirm password">
+                </div>
+                <br>
+                <div class="butt" onclick="login()">
+                    <input type="submit" value="Sign Up">
+                </div>
+                <div class="loginlink">
+                    <p>If already have an account</p>
+                    <a href="login.html">Login</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+
+<script>
+    function login()
+    {
+        window.open("login.html", "_blank");
+    }
+</script>
+
+</html>

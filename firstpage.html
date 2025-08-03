@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Delius&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: "Delius", serif;
+            font-style: normal;
+            padding: 0px;
+            margin: 0px;
+            position: relative;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+        }
+
+        body {
+            background-image: url('img3.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .loginpage {
+            width: 900px;
+            height: 500px;
+            margin-top: 50px;
+            border-radius: 20px;
+            border-color: #ffc0cb;
+            background: transparent;
+            border-style: solid;
+            backdrop-filter: blur(15px);
+
+        }
+
+        img {
+            position: relative;
+            display: inline-block;
+            left: 200px;
+            
+        }
+        input{
+            width: 250px;
+            height:50px;
+            border-radius: 10px;
+            border: none;
+            background-color: pink;
+            top: 30px;
+            right: 170px;
+        }
+        input:hover{
+            background-color: lightblue;
+        }
+        input:active{
+            background-color: hotpink;
+        }
+
+    </style>
+</head>
+
+<body>
+    
+        <div class="loginpage">
+            <img src="kk.png" alt="description" width="500px" height="400px">
+
+            <input type="submit" value="Get Started" onclick="signup()">
+           
+        </div>
+    
+</body>
+<script>
+    function signup()
+    {
+        window.open('signup.html')
+    }
+</script>
+
+</html>
